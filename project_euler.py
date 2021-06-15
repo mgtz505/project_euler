@@ -245,9 +245,6 @@ def problem16(N):
 # print(problem16(value16))
 
 
-
-
-
 #PROBLEM 20 - Correctly Solved
 # https://projecteuler.net/problem=20
 # n! means n × (n − 1) × ... × 3 × 2 × 1
@@ -277,6 +274,22 @@ def problem36(target):
     
 
 # print(problem36(1_000_000))
+
+
+#PROBLEM 48 - Solved Correctly
+# https://projecteuler.net/problem=48
+# The series, 1^1 + 2^2 + 3^3 + ... + 1010 = 10405071317.
+# Find the last ten digits of the series, 1^1 + 2^2 + 3^3 + ... + 1000^1000.
+
+def problem48(N):
+    sumArray = []
+    for i in range(1,1001):
+        sumArray.append(i ** i)
+    digits = str(sum(sumArray))
+    return digits[(len(digits) - 10):]
+
+print(problem48(1000))
+
 
 
 #PROBLEM 49
