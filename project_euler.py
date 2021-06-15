@@ -113,7 +113,7 @@ def problem7(N):
             if prime[p]:
                 primeArray.append(p)
 
-print(problem7(5_000_000))
+# print(problem7(5_000_000))
 
 
 #PROBLEM 8 - Incorrect Approach; Need to revisit
@@ -230,6 +230,23 @@ def problem14(target):
     return max(values)
 
 # print(problem14(999999))
+
+
+#PROBLEM 16 - Solved Correctly 
+# https://projecteuler.net/problem=16
+# 215 = 32768 and the sum of its digits is 3 + 2 + 7 + 6 + 8 = 26.
+# What is the sum of the digits of the number 21000?
+
+value16 = (2 ** 1000)
+def problem16(N):
+
+    return sum([int(i) for i in str(N)])
+
+# print(problem16(value16))
+
+
+
+
 
 #PROBLEM 20 - Correctly Solved
 # https://projecteuler.net/problem=20
