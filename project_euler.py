@@ -88,6 +88,34 @@ def problem6(N):
 # print(problem6(100))
 
 
+#PROBLEM 7 - Solved Correctly
+# https://projecteuler.net/problem=7
+# By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
+# What is the 10 001st prime number?
+
+def problem7(N):
+    #Will use Sieve of Eratosthenes to yield my primes:
+    primeArray = []
+
+    prime = [True for i in range(N + 1)]
+    p = 2
+    while (p * p <= N):
+
+        if (prime[p] == True):
+            for i in range(p * p, N + 1, p):
+                prime[i] = False
+        p += 1
+
+    for p in range(2, N + 1):
+        if len(primeArray) == 10001:
+            return primeArray[-1]
+        else:
+            if prime[p]:
+                primeArray.append(p)
+
+print(problem7(5_000_000))
+
+
 #PROBLEM 8 - Incorrect Approach; Need to revisit
 # https://projecteuler.net/problem=8
 # The four adjacent digits in the 1000-digit number that have the greatest product are 9 × 9 × 8 × 9 = 5832.
@@ -145,12 +173,32 @@ def problem9():
                     return a * b * c
 # print(problem9())
 
-#PROBLEM 10
+#PROBLEM 10 - Solved Correctly
 # https://projecteuler.net/problem=10
 # The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
 # Find the sum of all the primes below two million.
 
+def problem10(N):
+    #For this problem, I'll utilize the Sieve of Eratosthenes to yield my primes
+    primeArray = []
+    prime = [True for i in range(N + 1)]
+    p = 2
+    while (p * p <= N):
 
+        #if prime[p] is not changed, then it's prime
+        if (prime[p] == True):
+            #Update for all multiples of P
+            for i in range(p * p, N + 1, p):
+                prime[i] = False
+        p += 1
+    #Append Primes:
+    for p in range(2, N + 1):
+        if prime[p]:
+            primeArray.append(p)
+    
+    return sum(primeArray)
+
+# print(problem10(2_000_000))
 
 
 #Problem 14
