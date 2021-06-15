@@ -68,6 +68,25 @@ def problem5(ceiling):
 # print(problem5(999_999_999))
 
 
+#PROBLEM 6 - Solved Correctly
+# https://projecteuler.net/problem=6
+# The sum of the squares of the first ten natural numbers is,
+# The square of the sum of the first ten natural numbers is,
+# Hence the difference between the sum of the squares of the first ten natural numbers and the square of the sum is .
+# Find the difference between the sum of the squares of the first one hundred natural numbers and the square of the sum.
+
+def problem6(N):
+    sumOfSquares, sumNum = 0, 0
+    for i in range(1,N + 1):
+        sumOfSquares += (i * i)
+        sumNum += i
+    # print(sumOfSquares)
+    # print(sumNum)
+    # print(sumNum ** 2)
+
+    return (sumNum ** 2) - sumOfSquares
+# print(problem6(100))
+
 
 #PROBLEM 8 - Incorrect Approach; Need to revisit
 # https://projecteuler.net/problem=8
@@ -125,6 +144,13 @@ def problem9():
                 if (a + b + c == 1000) and (a**2 + b**2 == c**2):
                     return a * b * c
 # print(problem9())
+
+#PROBLEM 10
+# https://projecteuler.net/problem=10
+# The sum of the primes below 10 is 2 + 3 + 5 + 7 = 17.
+# Find the sum of all the primes below two million.
+
+
 
 
 #Problem 14
@@ -208,4 +234,16 @@ def problem49(floor):
     
 
     return
-print(problem49(1000))
+# print(problem49(1000))
+
+
+#PROBLEM 97 
+
+# value = (28433 * 2**7830457) + 1
+# value2 = 100100100100100100
+
+def problem97(N):
+    num = "".join([i for i in str(N)])
+    return len(num) / 1_000_000
+
+# print(problem97(value))
