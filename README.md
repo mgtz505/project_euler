@@ -13,4 +13,4 @@
 - Problem 25: [1000-digit Fibonacci Number](https://projecteuler.net/problem=25)
 - Problem 36: [Double-Base Palindromes](https://projecteuler.net/problem=36)
 - Problem 48: [Self Powers](https://projecteuler.net/problem=48)
-
+- Problem 52: [Permuted Multiples](https://projecteuler.net/problem=52)

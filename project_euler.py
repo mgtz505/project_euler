@@ -356,6 +356,21 @@ def problem49(floor):
 # print(problem49(1000))
 
 
+#PROBLEM 52 - 
+# https://projecteuler.net/problem=52
+# It can be seen that the number, 125874, and its double, 251748, contain exactly the same digits, but in a different order.
+# Find the smallest positive integer, x, such that 2x, 3x, 4x, 5x, and 6x, contain the same digits.
+
+value52 = 1_000_000
+def problem52(N):
+
+    for i in range(1,N):
+        if sorted(str(i * 2)) == sorted(str(i * 3)) == sorted(str(i * 4)) == sorted(str(i * 5)) == sorted(str(i * 6)): 
+            return i
+
+print(problem52(value52))
+
+
 #PROBLEM 97 
 
 # value = (28433 * 2**7830457) + 1
