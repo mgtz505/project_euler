@@ -258,6 +258,47 @@ def problem20(target):
 
 # print(problem20(100))
 
+#Problem 25
+# https://projecteuler.net/problem=25
+# What is the index of the first term in the Fibonacci sequence to contain 1000 digits?
+
+num25 = 1_000_000
+def problem25(N):
+    n1, n2, count, fibArray = 1, 1, 0, [] 
+
+    while count < N:
+        fibArray.append(str(n1))
+        if len(str(n1)) == 1000:
+            return len(fibArray) 
+        else:
+            # print(n1)
+            nth = n1 + n2
+            n1 = n2
+            n2 = nth
+            count += 1
+    
+# print(problem25(num25))
+
+
+
+#PROBLEM 30
+# https://projecteuler.net/problem=30
+# Surprisingly there are only three numbers that can be written as the sum of fourth powers of their digits:
+# 1634 = 1^4 + 6^4 + 3^4 + 4^4
+# 8208 = 8^4 + 2^4 + 0^4 + 8^4
+# 9474 = 9^4 + 4^4 + 7^4 + 4^4
+# As 1 = 1^4 is not a sum it is not included.
+# The sum of these numbers is 1634 + 8208 + 9474 = 19316.
+# Find the sum of all the numbers that can be written as the sum of fifth powers of their digits.
+
+# def problem30():
+#     for i in range(1,)
+#     return
+# print(problem30())
+
+
+
+
 
 #Problem 36 - Correctly Solved
 # https://projecteuler.net/problem=36
@@ -288,7 +329,7 @@ def problem48(N):
     digits = str(sum(sumArray))
     return digits[(len(digits) - 10):]
 
-print(problem48(1000))
+# print(problem48(1000))
 
 
 

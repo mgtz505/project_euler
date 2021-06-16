@@ -10,6 +10,7 @@
 - Problem 10: [Summation of Primes](https://projecteuler.net/problem=10)
 - Problem 16: [Power Digit Sum](https://projecteuler.net/problem=16)
 - Problem 20: [Factorial Digit Sum](https://projecteuler.net/problem=20)
+- Problem 25: [1000-digit Fibonacci Number](https://projecteuler.net/problem=25)
 - Problem 36: [Double-Base Palindromes](https://projecteuler.net/problem=36)
 - Problem 48: [Self Powers](https://projecteuler.net/problem=48)
 
