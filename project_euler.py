@@ -368,7 +368,22 @@ def problem52(N):
         if sorted(str(i * 2)) == sorted(str(i * 3)) == sorted(str(i * 4)) == sorted(str(i * 5)) == sorted(str(i * 6)): 
             return i
 
-print(problem52(value52))
+# print(problem52(value52))
+
+#PROBLEM 56 - Solved Correctly
+# https://projecteuler.net/problem=56
+# A googol (10100) is a massive number: one followed by one-hundred zeros; 100100 is almost unimaginably large: one followed by two-hundred zeros. Despite their size, the sum of the digits in each number is only 1.
+# Considering natural numbers of the form, ab, where a, b < 100, what is the maximum digital sum?
+
+def problem56(A,B):
+    digitalSums = []
+    for i in range(1,(A + 1)):
+        for j in range(1,(B + 1)):
+            digitalSums.append(sum([int(i) for i in str((i ** j))]))
+    print(digitalSums)
+    return max(digitalSums)
+
+print(problem56(100,100))
 
 
 #PROBLEM 97 

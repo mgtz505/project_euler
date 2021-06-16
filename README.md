@@ -14,3 +14,4 @@
 - Problem 36: [Double-Base Palindromes](https://projecteuler.net/problem=36)
 - Problem 48: [Self Powers](https://projecteuler.net/problem=48)
 - Problem 52: [Permuted Multiples](https://projecteuler.net/problem=52)
+- Problem 56: [Powerful Digit Sum](https://projecteuler.net/problem=56)
