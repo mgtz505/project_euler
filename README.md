@@ -3,6 +3,7 @@
 
 ## Solved Problems:
 - Problem 1: [Multiples of 3 and 5](https://projecteuler.net/problem=1)
+- Problem 2: [Even Fibonacci Numbers](https://projecteuler.net/problem=2)
 - Problem 4: [Largest Palindrome Product](https://projecteuler.net/problem=4)
 - Problem 5: [Smallest Multiple](https://projecteuler.net/problem=5)
 - Problem 6: [Sum Square Difference](https://projecteuler.net/problem=6)
