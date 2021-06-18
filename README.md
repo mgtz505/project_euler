@@ -1,4 +1,5 @@
 # This is my solution log for Project Euler
+## Needless to say, spoilers within!
 
 ## Solved Problems:
 - Problem 1: [Multiples of 3 and 5](https://projecteuler.net/problem=1)
