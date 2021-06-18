@@ -22,18 +22,19 @@ def problem1(N):
 #  find the sum of the even-valued terms.
 
 def problem2(N):
-    results = []
-    if N == 0:
-        return 0
-    elif N == 1 or N == 2:
-        return 1
-    else:
-        value = problem2(N - 1) + problem2(N - 2)
-        print(value)
-        if value % 2 == 0:
-            results.append(value)
-    return results
-# print(problem2(10))
+    fibs, n1, n2, count = [], 0, 1, 0
+    while count < N:
+        if n1 % 2 == 0:
+            fibs.append(n1)
+        nth = n1 + n2
+        n1 = n2
+        n2 = nth
+        count +=1
+    for i in range(0,len(fibs)):
+        if fibs[i] >= 4_000_000:  
+            return sum(fibs[:i])
+
+print(problem2(50))
 
 
 # PROBLEM 4 - Correctly Solved
@@ -313,8 +314,17 @@ def problem36(target):
             results.append(i)
     return sum(results)
     
-
 # print(problem36(1_000_000))
+
+#PROBLEM 41
+# https://projecteuler.net/problem=41
+# We shall say that an n-digit number is pandigital if it makes use of all the digits 1 to n exactly once.
+#  For example, 2143 is a 4-digit pandigital and is also prime.
+# What is the largest n-digit pandigital prime that exists?
+
+# def problem41(N):
+    
+# print(problem41(987654321))
 
 
 #PROBLEM 48 - Solved Correctly
@@ -330,6 +340,38 @@ def problem48(N):
     return digits[(len(digits) - 10):]
 
 # print(problem48(1000))
+
+#PROBLEM 46
+# https://projecteuler.net/problem=46
+# It was proposed by Christian Goldbach that every odd composite number can be written as the sum of a prime and twice a square.
+# 9 = 7 + 2×1^2
+# 15 = 7 + 2×2^2
+# 21 = 3 + 2×3^2
+# 25 = 7 + 2×3^2
+# 27 = 19 + 2×2^2
+# 33 = 31 + 2×1^2
+# It turns out that the conjecture was false.
+# What is the smallest odd composite that cannot be written as the sum of a prime and twice a square?
+
+def problem46(N):
+    primes = []
+    prime = [True for i in range(N + 1)]
+    p = 2
+    while (p * p <= N):
+        if (prime[p] == True):
+            for i in range(p * p, N + 1, p):
+                prime[i] = False
+        p += 1
+
+    for p in range(2, N + 1):
+        if prime[p]:
+            primes.append(p)
+
+    return primes
+
+# print(problem46(100))
+
+
 
 
 
@@ -383,7 +425,7 @@ def problem56(A,B):
     print(digitalSums)
     return max(digitalSums)
 
-print(problem56(100,100))
+# print(problem56(100,100))
 
 
 #PROBLEM 97 
@@ -396,3 +438,33 @@ def problem97(N):
     return len(num) / 1_000_000
 
 # print(problem97(value))
+
+
+
+#PROBLEM 104
+# # https://projecteuler.net/problem=104
+# The Fibonacci sequence is defined by the recurrence relation:
+# Fn = Fn−1 + Fn−2, where F1 = 1 and F2 = 1.
+# It turns out that F541, which contains 113 digits, 
+# is the first Fibonacci number for which the last nine digits are 1-9 pandigital
+#  (contain all the digits 1 to 9, but not necessarily in order).
+#   And F2749, which contains 575 digits, is the first Fibonacci number for which the first nine digits are 1-9 pandigital.
+# Given that Fk is the first Fibonacci number for which the first nine digits AND the last nine digits are 1-9 pandigital, find k.
+
+value104 = 1_000_000_000
+
+# def problem104(N):
+#     n1, n2, count, fibArray = 1, 1, 0, [] 
+#     while count < N:
+#         fibArray.append(str(n1))
+#         test = fibArray[-1]
+#         if sum([int(i) for i in (test[:10])]) == 45 and sum([int(i) for i in (test[-10])]) == 45:    
+#             return len(fibArray) 
+#         else:
+#             # print(n1)
+#             nth = n1 + n2
+#             n1 = n2
+#             n2 = nth
+#             count += 1
+
+# print(problem104(value104))
