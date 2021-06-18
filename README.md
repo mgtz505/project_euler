@@ -13,6 +13,7 @@
 - Problem 16: [Power Digit Sum](https://projecteuler.net/problem=16)
 - Problem 20: [Factorial Digit Sum](https://projecteuler.net/problem=20)
 - Problem 25: [1000-digit Fibonacci Number](https://projecteuler.net/problem=25)
+- Problem 29: [Distinct Powers](https://projecteuler.net/problem=29)
 - Problem 36: [Double-Base Palindromes](https://projecteuler.net/problem=36)
 - Problem 48: [Self Powers](https://projecteuler.net/problem=48)
 - Problem 52: [Permuted Multiples](https://projecteuler.net/problem=52)
