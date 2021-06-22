@@ -319,6 +319,19 @@ print(problem29(100))
 # print(problem30())
 
 
+#Problem 35
+# https://projecteuler.net/problem=35
+# The number, 197, is called a circular prime because all rotations of the digits: 197, 971, and 719, are themselves prime.
+# There are thirteen such primes below 100: 2, 3, 5, 7, 11, 13, 17, 31, 37, 71, 73, 79, and 97.
+# How many circular primes are there below one million?
+
+# def problem35(N):
+    
+#     for i in range(len(str(N))):
+
+ 
+# print(problem35(197))
+
 
 
 
@@ -328,14 +341,47 @@ print(problem29(100))
 # Find the sum of all numbers, less than one million, which are palindromic in base 10 and base 2.
 # (Please note that the palindromic number, in either base, may not include leading zeros.)
 
-def problem36(target):
-    results = []
-    for i in range(1,target):
-        if (str(i) == str(i)[::-1]) and (str(bin(i)[2:]) == str(bin(i)[:1:-1])):
-            results.append(i)
-    return sum(results)
+# def problem36(target):
+#     results = []
+#     for i in range(1,target):
+#         if (str(i) == str(i)[::-1]) and (str(bin(i)[2:]) == str(bin(i)[:1:-1])):
+#             results.append(i)
+#     return sum(results)
     
 # print(problem36(1_000_000))
+
+
+#PROBLEM 40 - Solved Correctly
+# https://projecteuler.net/problem=40
+# An irrational decimal fraction is created by concatenating the positive integers:
+# 0.123456789101112131415161718192021...
+# It can be seen that the 12th digit of the fractional part is 1.
+# If dn represents the nth digit of the fractional part, find the value of the following expression.
+# d1 × d10 × d100 × d1000 × d10000 × d100000 × d1000000
+import math
+def problem40(N):
+    starter, answer_sum = "", []
+    for i in range(0,N + 1,1):
+        starter += str(i)
+    #Poor code:
+    answer_sum.append(int(starter[1]))
+    answer_sum.append(int(starter[10]))
+    answer_sum.append(int(starter[10]))
+    answer_sum.append(int(starter[100]))
+    answer_sum.append(int(starter[1000]))
+    answer_sum.append(int(starter[10000]))
+    answer_sum.append(int(starter[100000]))
+    print(answer_sum)
+    return math.prod(answer_sum)
+
+
+print(problem40(1_000_000))
+
+
+
+
+
+
 
 #PROBLEM 41
 # https://projecteuler.net/problem=41
@@ -346,21 +392,6 @@ def problem36(target):
 # def problem41(N):
     
 # print(problem41(987654321))
-
-
-#PROBLEM 48 - Solved Correctly
-# https://projecteuler.net/problem=48
-# The series, 1^1 + 2^2 + 3^3 + ... + 1010 = 10405071317.
-# Find the last ten digits of the series, 1^1 + 2^2 + 3^3 + ... + 1000^1000.
-
-def problem48(N):
-    sumArray = []
-    for i in range(1,1001):
-        sumArray.append(i ** i)
-    digits = str(sum(sumArray))
-    return digits[(len(digits) - 10):]
-
-# print(problem48(1000))
 
 #PROBLEM 46
 # https://projecteuler.net/problem=46
@@ -391,6 +422,21 @@ def problem46(N):
     return primes
 
 # print(problem46(100))
+
+#PROBLEM 48 - Solved Correctly
+# https://projecteuler.net/problem=48
+# The series, 1^1 + 2^2 + 3^3 + ... + 1010 = 10405071317.
+# Find the last ten digits of the series, 1^1 + 2^2 + 3^3 + ... + 1000^1000.
+
+def problem48(N):
+    sumArray = []
+    for i in range(1,1001):
+        sumArray.append(i ** i)
+    digits = str(sum(sumArray))
+    return digits[(len(digits) - 10):]
+
+# print(problem48(1000))
+
 
 
 

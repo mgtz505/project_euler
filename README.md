@@ -15,6 +15,7 @@
 - Problem 25: [1000-digit Fibonacci Number](https://projecteuler.net/problem=25)
 - Problem 29: [Distinct Powers](https://projecteuler.net/problem=29)
 - Problem 36: [Double-Base Palindromes](https://projecteuler.net/problem=36)
+- Problem 40: [Champernowne's Constant](https://projecteuler.net/problem=40)
 - Problem 48: [Self Powers](https://projecteuler.net/problem=48)
 - Problem 52: [Permuted Multiples](https://projecteuler.net/problem=52)
 - Problem 56: [Powerful Digit Sum](https://projecteuler.net/problem=56)
